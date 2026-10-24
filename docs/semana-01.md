@@ -8,8 +8,9 @@
 
 ## 1. Mapeamento da Camada de Transporte
 Diagrama Mermaid demonstrando o ciclo de vida da requisição executada no laboratório:
+## 1. Mapeamento da Camada de Transporte
+Diagrama Mermaid demonstrando o ciclo de vida da requisição executada no laboratório:
 
-```mermaid
 sequenceDiagram
     autonumber
     participant C as Cliente (Netcat / cURL)
@@ -21,7 +22,6 @@ sequenceDiagram
     C->>S: GET / HTTP/1.1\r\nHost: example.com\r\n\r\n
     S-->>C: HTTP/1.1 200 OK (Payload + Headers)
     S->>C: TCP FIN
-
 2. Registro dos Experimentos de Laboratório
 Experimento 1: Netcat Nu & Falha 400 Bad Request
 Comando Testado: nc -C example.com 80 sem o header Host:
