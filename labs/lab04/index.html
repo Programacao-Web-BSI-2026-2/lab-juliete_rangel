@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laboratório de imagens responsivas e semântica HTML5 - IFF">
+    <title>Laboratório 04 - Imagens Responsivas</title>
+</head>
+<body>
+
+    <main>
+        <h1>Laboratório 04 - Imagens Responsivas</h1>
+
+        <h2>Otimização de Mídias e Semântica HTML5</h2>
+
+        <p>
+            Este laboratório apresenta a utilização de imagens responsivas,
+            formatos modernos e elementos semânticos do HTML5.
+        </p>
+
+        <figure>
+            <picture>
+                <!-- Imagem AVIF para telas grandes -->
+                <source
+                    srcset="banner-desktop.avif"
+                    media="(min-width: 1024px)"
+                    type="image/avif">
+
+                <!-- Imagem WebP para telas menores -->
+                <source
+                    srcset="banner-mobile.webp"
+                    media="(max-width: 1023px)"
+                    type="image/webp">
+
+                <!-- Imagem JPG como fallback -->
+                <img
+                    src="banner-fallback.jpg"
+                    alt="Novo rack de servidores IBM do campus Campos Centro"
+                    loading="lazy">
+            </picture>
+
+            <figcaption>
+                Figura 1.1: Detalhe físico da infraestrutura instalada
+                no laboratório do IFF.
+            </figcaption>
+        </figure>
+
+    </main>
+
+</body>
+</html>
